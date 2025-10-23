@@ -56,6 +56,35 @@ function App() {
 
   return (
     <div className="fixed inset-0 overflow-hidden">
+      <main>
+        <Info />
+        <Stage 
+          perspective={perspective} 
+          rotations={rotations}
+          transforms={transforms}
+          backfaceVisible={backfaceVisible}
+          width={size.width}
+          height={calculatedHeight}
+        />
+        <Controls 
+          perspective={perspective} 
+          onPerspectiveChange={setPerspective}
+          rotations={rotations}
+          onRotationsChange={setRotations}
+          transforms={transforms}
+          onTransformsChange={setTransforms}
+          backfaceVisible={backfaceVisible}
+          onBackfaceVisibleChange={setBackfaceVisible}
+          size={size}
+          onSizeChange={setSize}
+          aspectRatio={aspectRatio}
+          onAspectRatioChange={setAspectRatio}
+        />
+        
+        <Toaster />
+      </main>
+    </div>
+=======
   <main>
     <Info />
 
@@ -82,11 +111,9 @@ function App() {
       aspectRatio={aspectRatio}
       onAspectRatioChange={setAspectRatio}
     />
-
     <Toaster />
   </main>
 </div>
-
   )
 }
 

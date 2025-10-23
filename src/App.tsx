@@ -57,6 +57,7 @@ function App() {
   return (
     <div className="fixed inset-0 overflow-hidden">
       <main>
+        
         <Info />
         <Stage 
           perspective={perspective} 
@@ -80,6 +81,7 @@ function App() {
           aspectRatio={aspectRatio}
           onAspectRatioChange={setAspectRatio}
         />
+        
         <Toaster />
       </main>
     </div>
